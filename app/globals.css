@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 210 40% 98%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 221 92% 56%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 210 40% 94%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 217 91% 60%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 221 92% 56%;
+        --radius: 1.25rem;
+
+        --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        background-color: #F8FAFC;
+        color: #0F172A;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+        overflow-x: hidden;
+    }
+}
+
+/* ==========================================================================
+   Pure CSS Hardware-Accelerated Animations
+   ========================================================================== */
+
+@keyframes cssFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes cssFloatSlow {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -6px, 0);
+    }
+}
+
+@keyframes cssPulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px -2px rgba(43, 104, 246, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 28px 4px rgba(43, 104, 246, 0.65);
+    }
+}
+
+.css-fade-in {
+    animation: cssFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+}
+
+.css-float {
+    animation: cssFloatSlow 5s ease-in-out infinite;
+    will-change: transform;
+}
+
+.css-pulse-glow {
+    animation: cssPulseGlow 3s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Pure CSS Scroll-Expanding Hero Bento Collage
+   ========================================================================== */
+
+.hero-scroll-track {
+    height: 260vh;
+    position: relative;
+    background-color: #F8FAFC;
+}
+
+.hero-sticky-frame {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content-col {
+    width: 100%;
+    max-width: 580px;
+    opacity: calc(1 - var(--scroll-ratio, 0) * 3.5);
+    transform: translate3d(calc(var(--scroll-ratio, 0) * -50px), 0, 0);
+    will-change: opacity, transform;
+}
+
+.hero-collage-container {
+    position: absolute;
+    top: calc(5rem * (1 - var(--scroll-ratio, 0)));
+    left: calc(45% * (1 - var(--scroll-ratio, 0)));
+    width: calc(52% + 48% * var(--scroll-ratio, 0));
+    height: calc(76vh + 24vh * var(--scroll-ratio, 0));
+    border-radius: calc(32px * (1 - var(--scroll-ratio, 0)));
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
+    will-change: width, height, left, border-radius, top;
+}
+
+.hero-collage {
+    will-change: transform, width, height, border-radius;
+}
+
+.hero-collage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: calc(12px * (1 - var(--scroll-ratio, 0)));
+    width: 100%;
+    height: 100%;
+}
+
+.hero-bento-badge {
+    opacity: calc(1 - var(--scroll-ratio, 0) * 4);
+    will-change: opacity;
+}
+
+.hero-expanded-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: calc(clamp(0, (var(--scroll-ratio, 0) - 0.28) * 3, 1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    pointer-events: none;
+    z-index: 30;
+    will-change: opacity;
+}
+
+.hero-expanded-overlay.active {
+    pointer-events: auto;
+}
+
+@media (max-width: 767px) {
+    .hero-scroll-track {
+        height: 170dvh;
+    }
+
+    .hero-sticky-frame {
+        min-height: 100dvh;
+        height: auto;
+        overflow: visible;
+        padding-top: 4.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-content-col {
+        max-width: none;
+        flex: 0 0 auto;
+    }
+
+    .hero-collage-container {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        max-width: 100%;
+        height: min(58dvh, 30rem);
+        min-height: 20rem;
+        border-radius: 0.25rem;
+        flex: 0 0 auto;
+    }
+
+    .hero-collage-grid {
+        min-width: 0;
+        gap: 0.35rem;
+    }
+}
+
+@keyframes heroCollageExpand {
+    from {
+        top: 5rem;
+        left: 45%;
+        width: 52%;
+        height: 76dvh;
+        border-radius: 2rem;
+    }
+
+    to {
+        top: 0;
+        left: 0;
+        width: 100dvw;
+        height: 100dvh;
+        border-radius: 0;
+    }
+}
+
+@keyframes heroContentFade {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
+}
+
+@supports (animation-timeline: scroll()) {
+    @media (min-width: 768px) {
+        .hero-collage-container {
+            animation: heroCollageExpand linear both;
+            animation-timeline: scroll(root block);
+            animation-range: 0 160vh;
+        }
+
+        .hero-content-col {
+            animation: heroContentFade linear both;
+            animation-timeline: scroll(root block);
+            animation-range: 0 80vh;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-collage-container,
+    .hero-content-col,
+    .hero-bento-badge {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}

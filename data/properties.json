@@ -1,0 +1,230 @@
+[
+    {
+        "id": 1,
+        "title": "1 Kanal Owner-Built Villa, DHA Phase 8",
+        "type": "Villa",
+        "location": "DHA Karachi",
+        "address": "Street 12, DHA Phase 8, Karachi",
+        "price": 180000000,
+        "beds": 5,
+        "baths": 4,
+        "sqft": 1,
+        "areaUnit": "Kanal",
+        "metrics": {
+            "nocCleared": true,
+            "ownerBuilt": true,
+            "cornerParkFacing": true,
+            "servantQuarter": true,
+            "solarInstalled": true
+        },
+        "images": [
+            "https://images.pexels.com/photos/10647324/pexels-photo-10647324.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8134745/pexels-photo-8134745.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8089172/pexels-photo-8089172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        ],
+        "instantTour": true,
+        "agentId": 1,
+        "featured": true,
+        "description": "An owner-built DHA Phase 8 residence with NOC clearance, solar installation, premium finishes, a private pool, and generous family entertaining spaces.",
+        "amenities": [
+            "NOC Cleared",
+            "Owner Built",
+            "Corner/Park Facing",
+            "Servant Quarter",
+            "Solar Installed",
+            "Private Pool"
+        ],
+        "yearBuilt": 2022,
+        "parking": 3
+    },
+    {
+        "id": 2,
+        "title": "10 Marla Modern House, Bahria Town Phase 7",
+        "type": "Villa",
+        "location": "Rawalpindi",
+        "address": "Bahria Town Phase 7, Rawalpindi",
+        "price": 45000000,
+        "beds": 3,
+        "baths": 3,
+        "sqft": 10,
+        "areaUnit": "Marla",
+        "metrics": {
+            "nocCleared": true,
+            "ownerBuilt": true,
+            "cornerParkFacing": false,
+            "servantQuarter": true,
+            "solarInstalled": false
+        },
+        "images": [
+            "https://images.pexels.com/photos/32750273/pexels-photo-32750273.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/4933154/pexels-photo-4933154.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8135505/pexels-photo-8135505.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        ],
+        "instantTour": true,
+        "agentId": 2,
+        "featured": true,
+        "description": "A modern 10 Marla family home in Bahria Town Phase 7 with a secure community setting, owner-built detailing, and practical family spaces.",
+        "amenities": [
+            "NOC Cleared",
+            "Owner Built",
+            "Servant Quarter",
+            "Near Park",
+            "Double-Height Lounge",
+            "Secure Community"
+        ],
+        "yearBuilt": 2021,
+        "parking": 2
+    },
+    {
+        "id": 3,
+        "title": "2 Kanal Farmhouse, Bedian Road",
+        "type": "Farmhouse",
+        "location": "Bedian Road Lahore",
+        "address": "Bedian Road, Lahore",
+        "price": 350000000,
+        "beds": 4,
+        "baths": 4,
+        "sqft": 2,
+        "areaUnit": "Kanal",
+        "metrics": {
+            "nocCleared": true,
+            "ownerBuilt": true,
+            "cornerParkFacing": true,
+            "servantQuarter": true,
+            "solarInstalled": true
+        },
+        "images": [
+            "https://images.pexels.com/photos/1669787/pexels-photo-1669787.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/31656168/pexels-photo-31656168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8143671/pexels-photo-8143671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        ],
+        "instantTour": true,
+        "agentId": 3,
+        "featured": true,
+        "description": "A 2 Kanal owner-built farmhouse on Bedian Road with NOC clearance, solar power, landscaped grounds, and generous private entertaining areas.",
+        "amenities": [
+            "NOC Cleared",
+            "Owner Built",
+            "Corner/Park Facing",
+            "Servant Quarter",
+            "Solar Installed",
+            "Orchard Grounds"
+        ],
+        "yearBuilt": 2020,
+        "parking": 4
+    },
+    {
+        "id": 4,
+        "title": "DHA Islamabad 4 Kanal Farmhouse Estate",
+        "type": "Farmhouse",
+        "location": "DHA Islamabad",
+        "address": "DHA Phase II, Islamabad",
+        "price": 98000000,
+        "beds": 4,
+        "baths": 3,
+        "sqft": 4,
+        "areaUnit": "Kanal",
+        "metrics": {
+            "nocCleared": true,
+            "ownerBuilt": true,
+            "cornerParkFacing": false,
+            "servantQuarter": true,
+            "solarInstalled": true
+        },
+        "images": [
+            "https://images.pexels.com/photos/8134745/pexels-photo-8134745.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8082322/pexels-photo-8082322.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/7045352/pexels-photo-7045352.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        ],
+        "instantTour": false,
+        "agentId": 4,
+        "featured": true,
+        "description": "A private DHA Islamabad farmhouse estate with NOC clearance, solar power, green space, and a calm setting close to the capital's key districts.",
+        "amenities": [
+            "NOC Cleared",
+            "Owner Built",
+            "Servant Quarter",
+            "Solar Installed",
+            "Private Pool",
+            "Green Belt"
+        ],
+        "yearBuilt": 2019,
+        "parking": 2
+    },
+    {
+        "id": 5,
+        "title": "Gulberg Executive Villa",
+        "type": "Villa",
+        "location": "Gulberg",
+        "address": "Gulberg II, Lahore",
+        "price": 65000000,
+        "beds": 4,
+        "baths": 3,
+        "sqft": 350,
+        "areaUnit": "Sq Yd",
+        "metrics": {
+            "nocCleared": true,
+            "ownerBuilt": true,
+            "cornerParkFacing": false,
+            "servantQuarter": true,
+            "solarInstalled": false
+        },
+        "images": [
+            "https://images.pexels.com/photos/31656168/pexels-photo-31656168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/1669787/pexels-photo-1669787.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/7166645/pexels-photo-7166645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        ],
+        "instantTour": true,
+        "agentId": 3,
+        "featured": true,
+        "description": "A polished Gulberg II executive villa with NOC clearance, owner-built detailing, bright family spaces, and a practical central Lahore address.",
+        "amenities": [
+            "NOC Cleared",
+            "Owner Built",
+            "Servant Quarter",
+            "Central Location",
+            "Chef's Kitchen",
+            "Rooftop Terrace"
+        ],
+        "yearBuilt": 2018,
+        "parking": 2
+    },
+    {
+        "id": 6,
+        "title": "Emaar Karachi Coastal Residence",
+        "type": "Villa",
+        "location": "DHA Karachi",
+        "address": "Emaar Crescent Bay, Karachi",
+        "price": 150000000,
+        "beds": 4,
+        "baths": 4,
+        "sqft": 500,
+        "areaUnit": "Sq Yd",
+        "metrics": {
+            "nocCleared": true,
+            "ownerBuilt": true,
+            "cornerParkFacing": true,
+            "servantQuarter": true,
+            "solarInstalled": true
+        },
+        "images": [
+            "https://images.pexels.com/photos/4933154/pexels-photo-4933154.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/32750273/pexels-photo-32750273.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8134748/pexels-photo-8134748.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        ],
+        "instantTour": true,
+        "agentId": 2,
+        "featured": true,
+        "description": "A premium Emaar coastal residence with NOC clearance, owner-built interiors, park-facing outlooks, solar support, and resort-style community access.",
+        "amenities": [
+            "NOC Cleared",
+            "Owner Built",
+            "Corner/Park Facing",
+            "Servant Quarter",
+            "Solar Installed",
+            "Sea View"
+        ],
+        "yearBuilt": 2023,
+        "parking": 3
+    }
+]

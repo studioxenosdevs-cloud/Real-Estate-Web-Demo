@@ -1,0 +1,30 @@
+[
+    {
+        "id": "placement",
+        "eyebrow": "01 / Confidential Placement",
+        "title": "Off-Market Property Acquisitions",
+        "description": "Verified access to unlisted villas, farmhouses, and architectural residences across Pakistan.",
+        "footer": "NOC and documentation review"
+    },
+    {
+        "id": "relocation",
+        "eyebrow": "02 / Mobility",
+        "title": "Pakistan Relocation & Settlement",
+        "description": "Trusted guidance for families moving between Karachi, Lahore, Islamabad, and Rawalpindi.",
+        "footer": "Across Pakistan"
+    },
+    {
+        "id": "management",
+        "eyebrow": "03 / Asset Preservation",
+        "title": "Property Asset Management",
+        "description": "Structured oversight for tenancy, maintenance, documentation, and long-term asset value.",
+        "footer": "Turnkey oversight"
+    },
+    {
+        "id": "development",
+        "eyebrow": "04 / Design & Development",
+        "title": "Architectural & Development Counsel",
+        "description": "Practical counsel for owner-built residences, land potential, and premium property improvements.",
+        "footer": "Bespoke curation"
+    }
+]

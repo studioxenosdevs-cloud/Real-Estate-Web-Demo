@@ -1,0 +1,117 @@
+[
+    {
+        "id": 1,
+        "name": "Sana Ahmed",
+        "title": "Senior Luxury Property Advisor",
+        "email": "sana.ahmed@aether.pk",
+        "phone": "923001111111",
+        "photo": "https://images.pexels.com/photos/25651531/pexels-photo-25651531.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
+        "bio": "Sana brings over 15 years of experience in Pakistan's luxury property market, specializing in high-end villas and estates across Karachi and Lahore.",
+        "closedDeals": 127,
+        "activeListings": 8,
+        "rating": 4.9,
+        "specialties": [
+            "Luxury Villas",
+            "DHA Karachi",
+            "Estate Sales",
+            "Investment Properties"
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Ayesha K.",
+                "rating": 5,
+                "text": "Sana made the entire buying process effortless and understood exactly what our family needed.",
+                "date": "2025-08-15"
+            },
+            {
+                "id": 2,
+                "author": "Usman P.",
+                "rating": 5,
+                "text": "Professional, responsive, and deeply knowledgeable about the Karachi market.",
+                "date": "2025-07-22"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Hamza Qureshi",
+        "title": "Residential Investment Advisor",
+        "email": "hamza.qureshi@aether.pk",
+        "phone": "923002222222",
+        "photo": "https://images.pexels.com/photos/28442318/pexels-photo-28442318.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
+        "bio": "Hamza combines a finance background with deep knowledge of Lahore residential investments, helping clients assess value, documentation, and long-term potential.",
+        "closedDeals": 98,
+        "activeListings": 6,
+        "rating": 4.8,
+        "specialties": [
+            "Premium Villas",
+            "Bahria Town",
+            "Plots",
+            "Investment Analysis"
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Bilal R.",
+                "rating": 5,
+                "text": "Hamza negotiated an excellent deal and his financial analysis gave us confidence in the purchase.",
+                "date": "2025-08-01"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Mariam Khan",
+        "title": "Urban Property Expert",
+        "email": "mariam.khan@aether.pk",
+        "phone": "923003333333",
+        "photo": "https://images.pexels.com/photos/33680700/pexels-photo-33680700.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
+        "bio": "Mariam specializes in urban residences and premium plots in Gulberg. She helps buyers navigate Lahore's competitive central market with clarity.",
+        "closedDeals": 85,
+        "activeListings": 5,
+        "rating": 4.9,
+        "specialties": [
+            "Urban Villas",
+            "Gulberg",
+            "Plots",
+            "First-Time Buyers"
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Danish T.",
+                "rating": 5,
+                "text": "Mariam found us the perfect home in Gulberg and understood our budget perfectly.",
+                "date": "2025-08-20"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Faisal Shah",
+        "title": "Estate & Land Specialist",
+        "email": "faisal.shah@aether.pk",
+        "phone": "923004444444",
+        "photo": "https://images.pexels.com/photos/5308640/pexels-photo-5308640.jpeg?auto=compress&cs=tinysrgb&h=400&w=400",
+        "bio": "Faisal focuses on farmhouse estates and land acquisitions around Islamabad. His understanding of documentation makes him a trusted advisor for families and investors.",
+        "closedDeals": 72,
+        "activeListings": 4,
+        "rating": 4.7,
+        "specialties": [
+            "Farmhouse Estates",
+            "DHA Islamabad",
+            "Land Acquisition",
+            "Investment"
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Farah B.",
+                "rating": 5,
+                "text": "Faisal helped us find the perfect farmhouse estate and handled the process with great care.",
+                "date": "2025-08-10"
+            }
+        ]
+    }
+]
