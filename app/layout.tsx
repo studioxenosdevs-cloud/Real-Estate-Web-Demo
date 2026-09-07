@@ -4,7 +4,8 @@ import { Inter } from 'next/font/google';
 import { AuthProvider } from '@/lib/auth-context';
 import Navbar from '@/components/site/navbar';
 import Footer from '@/components/site/footer';
-import LiveChat from '@/components/site/live-chat';
+import Chatbot from '@/components/Chatbot';
+import { MarketplaceProvider } from '@/lib/marketplace-context';
 
 import SmoothScrollProvider from '@/components/providers/smooth-scroll';
 
@@ -26,10 +27,12 @@ export default function RootLayout({
             <body className={inter.className}>
                 <SmoothScrollProvider>
                     <AuthProvider>
-                        <Navbar />
-                        {children}
-                        <Footer />
-                        <LiveChat />
+                        <MarketplaceProvider>
+                            <Navbar />
+                            {children}
+                            <Footer />
+                            <Chatbot />
+                        </MarketplaceProvider>
                     </AuthProvider>
                 </SmoothScrollProvider>
             </body>

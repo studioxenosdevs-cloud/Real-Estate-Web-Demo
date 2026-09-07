@@ -21,6 +21,7 @@ import {
 import { Button } from '@/components/ui/button';
 import type { Filters } from '@/lib/types';
 import { properties } from '@/lib/properties';
+import LocationAutocomplete from '@/components/maps/location-autocomplete';
 
 interface HeroProps {
     filters: Filters;
@@ -129,23 +130,7 @@ export default function Hero({ filters, setFilters }: HeroProps) {
                             <label className="text-xs font-medium text-slate-500 flex items-center gap-1.5">
                                 <MapPin className="h-3.5 w-3.5" /> Location
                             </label>
-                            <Select
-                                value={filters.location}
-                                onValueChange={(v) => setFilters({ ...filters, location: v })}
-                            >
-                                <SelectTrigger className="bg-slate-50">
-                                    <SelectValue placeholder="All Locations" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="all">All Locations</SelectItem>
-                                    <SelectItem value="DHA Karachi">DHA Karachi</SelectItem>
-                                    <SelectItem value="Bahria Town Lahore">Bahria Town Lahore</SelectItem>
-                                    <SelectItem value="Rawalpindi">Rawalpindi</SelectItem>
-                                    <SelectItem value="Gulberg">Gulberg</SelectItem>
-                                    <SelectItem value="DHA Islamabad">DHA Islamabad</SelectItem>
-                                    <SelectItem value="Bedian Road Lahore">Bedian Road Lahore</SelectItem>
-                                </SelectContent>
-                            </Select>
+                            <LocationAutocomplete value={filters.location} onChange={(location) => setFilters({ ...filters, location })} />
                         </div>
 
                         <div className="space-y-1.5">

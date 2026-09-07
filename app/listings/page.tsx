@@ -3,12 +3,14 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
-import { properties } from '@/lib/properties';
 import type { Filters } from '@/lib/types';
+import { useMarketplace } from '@/lib/marketplace-context';
 import FilterBar from '@/components/site/filter-bar';
 import PropertyCard from '@/components/site/property-card';
+import InteractiveMap from '@/components/maps/interactive-map';
 
 export default function ListingsPage() {
+    const { properties } = useMarketplace();
     const [filters, setFilters] = useState<Filters>({
         location: 'all',
         propertyType: 'all',
@@ -16,6 +18,7 @@ export default function ListingsPage() {
         beds: 'all',
         baths: 'all',
     });
+    const [activeMapId, setActiveMapId] = useState<number>();
 
     const filtered = useMemo(() => {
         return properties.filter((p) => {
@@ -57,6 +60,11 @@ export default function ListingsPage() {
                     <FilterBar filters={filters} onChange={setFilters} resultCount={filtered.length} />
                 </div>
 
+                <div className="mb-8 overflow-hidden border border-slate-200 bg-white shadow-sm">
+                    <div className="border-b border-slate-100 px-5 py-4"><h2 className="font-bold text-slate-900">Explore on map</h2><p className="mt-1 text-xs text-slate-500">Hover a listing to highlight its price pin.</p></div>
+                    <InteractiveMap properties={filtered} activeId={activeMapId} onSelect={setActiveMapId} />
+                </div>
+
                 {filtered.length === 0 ? (
                     <div className="text-center py-20">
                         <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 mb-4">
@@ -70,7 +78,7 @@ export default function ListingsPage() {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filtered.map((property, i) => (
-                            <PropertyCard key={property.id} property={property} index={i} />
+                            <PropertyCard key={property.id} property={property} index={i} highlighted={activeMapId === property.id} onHover={setActiveMapId} />
                         ))}
                     </div>
                 )}

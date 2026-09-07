@@ -20,14 +20,16 @@ import { useAuth } from '@/lib/auth-context';
 interface PropertyCardProps {
     property: Property;
     index?: number;
+    onHover?: (id: number | undefined) => void;
+    highlighted?: boolean;
 }
 
-export default function PropertyCard({ property }: PropertyCardProps) {
+export default function PropertyCard({ property, onHover, highlighted = false }: PropertyCardProps) {
     const { user, savedHomes, toggleSavedHome } = useAuth();
     const isSaved = savedHomes.includes(property.id);
 
     return (
-        <div className="bg-white rounded-sm border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#2B68F6]/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col group">
+        <div onMouseEnter={() => onHover?.(property.id)} onMouseLeave={() => onHover?.(undefined)} className={`bg-white rounded-sm border shadow-sm hover:shadow-xl hover:border-[#2B68F6]/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col group ${highlighted ? 'border-blue-500 ring-2 ring-blue-100' : 'border-slate-200/90'}`}>
             {/* Property Image with Rounded Container & Crisp Badges */}
             <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-100">
                 <Link href={`/listings/${property.id}`} className="block h-full w-full">

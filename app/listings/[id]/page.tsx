@@ -22,16 +22,20 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { getPropertyById, getAgentById, getSimilarProperties } from '@/lib/properties';
+import { getAgentById, getSimilarProperties } from '@/lib/properties';
 import { formatPrice, formatPriceFull, buildWhatsAppUrl, propertyInquiryMessage } from '@/lib/whatsapp';
 import InstallmentPlanCalculator from '@/components/site/installment-plan-calculator';
 import PropertyCard from '@/components/site/property-card';
 import { useAuth } from '@/lib/auth-context';
+import NeighborhoodInsights from '@/components/maps/neighborhood-insights';
+import TourRequestForm from '@/components/site/tour-request-form';
+import { useMarketplace } from '@/lib/marketplace-context';
 
 export default function PropertyDetailsPage() {
     const params = useParams();
     const id = parseInt(params.id as string);
-    const property = getPropertyById(id);
+    const { properties } = useMarketplace();
+    const property = properties.find((item) => item.id === id);
 
     if (!property) {
         notFound();
@@ -199,6 +203,10 @@ export default function PropertyDetailsPage() {
                             </summary>
                             <div className="px-4 pb-4 sm:px-6 sm:pb-6"><InstallmentPlanCalculator price={p.price} /></div>
                         </details>
+
+                        <NeighborhoodInsights property={p} />
+
+                        <TourRequestForm property={p} />
 
                         <details className="group border border-slate-200 bg-white p-4 sm:p-6 rounded-sm">
                             <summary className="cursor-pointer list-none pr-6 text-base sm:text-lg font-bold text-slate-900 marker:hidden after:float-right after:text-blue-600 after:content-['+'] group-open:after:content-['−']">

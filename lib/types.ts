@@ -29,6 +29,7 @@ export interface Property {
     amenities: string[];
     yearBuilt: number;
     parking: number;
+    status?: 'Active' | 'Pending' | 'Sold';
 }
 
 export interface Agent {
